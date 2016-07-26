@@ -99,12 +99,12 @@ public class Simulator {
 			}
 			else if(action==3){
 				if(!isNight){
-					fruitNumber+=3;
-					tinderNumber+=2;
+					fruitNumber+=(int)(Math.random()*5);
+					tinderNumber+=(int)(Math.random()*3);
 				}
 				else{
-					fruitNumber+=2;
-					tinderNumber+=1;
+					fruitNumber+=(int)(Math.random()*5/2);
+					tinderNumber+=(int)(Math.random()*3/2);
 				}
 				properties[3]-=10;
 				properties[4]-=5;
