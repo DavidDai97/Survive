@@ -313,10 +313,19 @@ public class Simulator {
 			//Every time this always happens
 			if(properties[2]<1 || properties[3]<1 || properties[4]<1){
 				isAlive=false;
+				System.out.println("You died from hypothermia!!!!!!!!!! You have lived " + properties[1] + " days, " + properties[0] +" hours.");
+			}
+			else if(properties[3]<1){
+				isAlive=false;
+				System.out.println("You died from dehydration!!!!!!!!!! You have lived " + properties[1] + " days, " + properties[0] +" hours.");
+			}
+			else if(properties[4]<1){
+				isAlive=false;
+				System.out.println("You died from out of energy!!!!!!!!!! You have lived " + properties[1] + " days, " + properties[0] +" hours.");
 			}
 			//is the player still alive?
 		}
-		System.out.println("You died!!!!!!!!!! You have lived " + properties[1] + " days, " + properties[0] +" hours.");
+		
 	}
 	
 	public static double[] timePassing(double[] properties, int hours, boolean isNormal){
