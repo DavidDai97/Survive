@@ -8,7 +8,11 @@ public class Simulator {
 		// TODO Auto-generated method stub
 		boolean isNight=false;
 		// time initialization
-		double[] properties={12, 0, 92, 80, 75, 60, 0};
+		double bodyHeat=Math.random()*15+85;
+		double dehydration=Math.random()*20 +70;
+		double hungry=Math.random()*10+70;
+		double tired=Math.random()*20+50;
+		double[] properties={12, 0, bodyHeat, dehydration, hungry, tired, 0};
 		boolean isAlive=true;
 		// properties initialization
 		int woodNumber=0;
@@ -331,8 +335,11 @@ public class Simulator {
 			if(isNormal){
 				if(properties[0]>=21 || properties[0]<=6){
 					properties[2]=(properties[2]-10)*0.85;
+					properties[3]=properties[3]-(2+(properties[3]-2)*0.97)/2;
 				}
-				properties[3]=(properties[3]-2)*0.97;
+				else{
+					properties[3]=(properties[3]-2)*0.97;
+				}
 				properties[4]=(properties[4]-1)*0.96;
 			}
 		}
