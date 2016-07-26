@@ -118,12 +118,12 @@ public class Simulator {
 			}
 			else if(action==4){
 				if(!isNight){
-					woodNumber+=3;
-					ropeNumber+=2;
+					woodNumber+=(int)(Math.random()*5);
+					ropeNumber+=(int)(Math.random()*3);
 				}
 				else{
-					woodNumber+=2;
-					ropeNumber+=1;
+					woodNumber+=(int)(Math.random()*5/2);
+					ropeNumber+=(int)(Math.random()*3/2);
 				}
 				properties[3]-=10;
 				properties[4]-=5;
@@ -240,9 +240,6 @@ public class Simulator {
 				properties[5]-=30;
 				properties[4]-=30;
 				if(isNight){
-					//for(int i=0; i<6; i++){
-						//properties[2]=(properties[2]-10)*0.85;
-					//}
 					fruitNumber+=2;
 					tinderNumber+=1;
 				}
