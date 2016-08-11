@@ -2,7 +2,7 @@
 public class Simulator {
 
 	/**
-	 * @这是修改后的版本，优化版v1.0
+	 * @这是修改后的版本，优化版v2.0
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
